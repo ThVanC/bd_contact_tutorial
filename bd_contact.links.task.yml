@@ -1,0 +1,4 @@
+bd_contact_list:
+  title: BD Contact
+  route_name: bd_contact_list
+  base_route: system.admin_content

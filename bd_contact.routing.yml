@@ -1,0 +1,30 @@
+bd_contact_list:
+  path: '/admin/content/bd_contact'
+  defaults:
+    _controller: '\Drupal\bd_contact\Controller\AdminController::content'
+  requirements:
+    _permission: 'manage bd contact forms'
+
+bd_contact_add:
+  path: '/admin/content/bd_contact/add'
+  defaults:
+    _form: '\Drupal\bd_contact\AddForm'
+    _title: 'Create contact'
+  requirements:
+    _permission: 'use bd contact form'
+
+bd_contact_edit:
+  path: 'admin/content/bd_contact/edit/{id}'
+  defaults:
+    _form: '\Drupal\bd_contact\AddForm'
+    _title: 'Edit contact'
+  requirements:
+    _permission: 'use bd contact form'
+
+bd_contact_delete:
+  path: '/admin/content/bd_contact/delete/{id}'
+  defaults:
+    _form: 'Drupal\bd_contact\DeleteForm'
+    _title: 'Delete contact'
+  requirements:
+    _permission: 'manage bd contact forms'
